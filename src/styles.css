@@ -4,15 +4,16 @@
 
 @tailwind utilities;
 
-
-
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
     .phone {
         background-image: url("resources/icons/phone.svg");
         background-repeat: no-repeat;
         background-position: bottom;
         background-size: cover;
     }   
+}
+
+@media screen and (min-width: 1024px) {
     .banner #text-part {
         background-image: url("resources/icons/banner-bg.svg");
         background-repeat: no-repeat;
