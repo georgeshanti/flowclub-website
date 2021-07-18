@@ -8,11 +8,11 @@
         <link rel="icon favicon" href="/favicon.705202ea.png">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet">
+        <!-- <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet"> -->
         <link rel="stylesheet" href="/styles.8986bff4.css">
     <script src="/styles.8986bff4.js"></script></head>
 
-    <body class="bg-primary-bk">
+    <body class="bg-primary-bk relative">
         <!-- Nav -->
 <div class="max-w-7xl mx-auto">
     <div class="relative">
@@ -21,7 +21,7 @@
                 <nav class="relative flex items-center justify-between sm:h-10" aria-label="Global">
                     <div class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
                         <div class="flex items-center justify-between w-full md:w-auto">
-                            <a href="/">
+                            <a href=".">
                                 <span class="sr-only">Flow</span>
                                 <img class="lg:w-40 w-32 sm:h-10" src="/logo.21f349ac.svg" alt="Flow logo">
                             </a>
@@ -111,8 +111,9 @@
                                     <div class="mt-14 md:text-right text-center">
                                         <p class="mb-5 text-gray-100 xl:text-lg lg:text-base md:text-sm">Get on the waitlist and reserve your username</p>
                                         <div class="inline-flex bg-white py-1 px-1 pl-3 items-center rounded-md border-2 border-primary-btn">
-    <input type="text" class="focus:outline-none px-1 text-gray-800 md:w-auto w-32" placeholder="Enter your phone no.">
-    <button type="" class="bg-primary-btn text-gray-100 md:px-7 px-5 py-2 rounded-md uppercase text-xs">Get Access</button>
+    <input id="getAccessHero-input" type="text" class="focus:outline-none px-1 text-gray-800 md:w-auto w-32" placeholder="Enter your phone no.">
+    <button id="getAccessHero" type="" class="bg-primary-btn text-gray-100 md:px-7 px-5 py-2 rounded-md uppercase text-xs">Get Access</button>
+    <span id="getAccessHero-error" class="block"></span>
 </div>
                                     </div>
                                 </div>
@@ -241,8 +242,9 @@
                     <p class=" my-7 max-w-md mx-auto leading-7">Join the club with something and a line that is too long for one line and so flows over to the second line.</p>
                     <span class="mb-2 block text-alt-aurelium">Get on the waitlist and reserve your username</span>
                     <div class="inline-flex bg-white py-1 px-1 pl-3 items-center rounded-md border-2 border-primary-btn">
-    <input type="text" class="focus:outline-none px-1 text-gray-800 md:w-auto w-32" placeholder="Enter your phone no.">
-    <button type="" class="bg-primary-btn text-gray-100 md:px-7 px-5 py-2 rounded-md uppercase text-xs">Get Access</button>
+    <input id="undefined-input" type="text" class="focus:outline-none px-1 text-gray-800 md:w-auto w-32" placeholder="Enter your phone no.">
+    <button id="undefined" type="" class="bg-primary-btn text-gray-100 md:px-7 px-5 py-2 rounded-md uppercase text-xs">Get Access</button>
+    <span id="undefined-error" class="block"></span>
 </div>
 
                     <!-- absolute positioned icons -->
@@ -310,6 +312,23 @@
     </div>
 </div>
 <!-- Footer ends -->
+        <div class="absolute max-w-lg mx-auto top-0 bg-white z-20 hidden" id="modal">
+    <button id="closeModal" class="block">Close</button>
+    <div>
+        <h2 id="modalTitle" class="hidden"></h2>
+        <div id="inputArea" class="hidden">
+            <input type="text" id="userInput">
+            <button id="userInputSubmit">Submit</button>
+        </div>
+        <div id="successMessage" class="hidden"></div>
+        <div id="modalLoader" class="hidden">Loading</div>
+        <div id="modalErrorMessage" class="hidden"></div>
+    </div>
+</div>
+
+<div class="absolute inset-0 bg-black opacity-60 z-10 hidden" id="modalOverlay">
+
+</div>
     </body>
 
 </html>
