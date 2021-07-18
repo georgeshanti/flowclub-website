@@ -9,7 +9,7 @@
   "scripts": {
     "clean": "rm dist/bundle.js",
     "start": "parcel src/index.html src/about.html --no-cache",
-    "build-prod": "parcel build src/index.html src/about.html --no-cache --out-dir docs/"
+    "build-prod": "parcel build src/index.html src/about.html --no-cache --out-dir docs/ --public-url ."
   },
   "dependencies": {},
   "devDependencies": {
