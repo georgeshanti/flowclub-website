@@ -10,7 +10,7 @@ window.onload = () => {
 
     navOpenButton.addEventListener('click', function () {
         navOpenButton.setAttribute('aria-expanded', "true");
-        navLinks.classList.add('duration-150')
+        navLinks.classList.add('duration-150', 'ease-out')
         navLinks.classList.remove('hidden');
         setTimeout(function () {
             navLinks.classList.add('opacity-100', 'scale-100');
@@ -20,8 +20,8 @@ window.onload = () => {
 
     navCloseButton.addEventListener('click', () => {
         navOpenButton.setAttribute('aria-expanded', "false");
-        navLinks.classList.remove('duration-150', 'opacity-100', 'scale-100');
-        navLinks.classList.add('duration-100', 'opacity-0', 'scale-95');
+        navLinks.classList.remove('duration-150', 'ease-out', 'opacity-100', 'scale-100');
+        navLinks.classList.add('duration-100', 'ease-in', 'opacity-0', 'scale-95');
 
         setTimeout(() => {
             navLinks.classList.add('hidden');
@@ -48,8 +48,6 @@ function cleanupModal () {
 }
 
 function openModal (targetElement, callBack) {
-    console.log('Showing modal');
-
     let modal = document.querySelector('#modal');
     let overlay = document.querySelector('#modalOverlay');
     let modalCloseButton = document.querySelector('#closeModal');
@@ -59,9 +57,26 @@ function openModal (targetElement, callBack) {
     modal.classList.remove('hidden');
     overlay.classList.remove('hidden');
 
+    setTimeout(() => {
+        modal.classList.add('duration-150', 'ease-out', 'opacity-100', 'scale-100');
+        overlay.classList.add('duration-150', 'ease-out', 'opacity-80');
+
+        modal.classList.remove('opacity-0', 'scale-95');
+        overlay.classList.remove('opacity-0');
+    }, 2);
+
     modalClose = () => {
-        modal.classList.add('hidden');
-        overlay.classList.add('hidden');
+
+        modal.classList.remove('opacity-100', 'scale-100', 'duration-150', 'ease-out');
+        overlay.classList.remove('opacity-80', 'duration-150', 'ease-out');
+
+        modal.classList.add('duration-100', 'ease-in', 'opacity-0', 'scale-95');
+        overlay.classList.add('duration-100', 'ease-in', 'opacity-0');
+
+        setTimeout(() => {
+            modal.classList.add('hidden');
+            overlay.classList.add('hidden');
+        }, 150);
 
         cleanupModal();
 

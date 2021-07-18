@@ -7,26 +7,26 @@
             <div class="max-w-7xl mx-auto">
                 <div class="relative overflow-hidden">
                     <!-- Main section -->
-                    <div class="grid md:grid-cols-2 xl:mt-0 mt-10 mb-20 xl:gap-x-24 gap-x-10">
+                    <div class="grid md:grid-cols-2 xl:mt-0 md:mt-10 mt-0 mb-20 xl:gap-x-24 gap-x-10">
                         <div class="relative z-10 pb-8 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
-                            <main class="mt-10 mx-auto max-w-7xl sm:mt-12 md:mt-16 lg:mt-20 xl:mt-24">
+                            <main class="md:mt-10 mt-3 mx-auto max-w-7xl sm:mt-12 md:mt-16 lg:mt-20 xl:mt-24">
                                 <div class="">
-                                    <h1 class="xl:text-7xl lg:text-4xl md:text-3xl text-4xl tracking-tight font-extrabold text-primary-font md:text-right text-center">
-                                        <span class="block mb-6">Invest with </span>
+                                    <h1 class="xl:text-7xl lg:text-6xl text-5xl tracking-tight font-extrabold text-primary-font md:text-right text-center">
+                                        <span class="block md:mb-6 mb-3">Invest with </span>
                                         <span>your friends</span>
                                     </h1>
-                                    <p class="xl:mt-10 md:mt-14 mt-10 text-base text-gray-50 xl:text-2xl lg:text-lg md:text-base md:text-right text-center ml-auto xl:leading-10">
+                                    <p class="xl:mt-10 md:mt-14 mt-6 text-base text-gray-50 xl:text-2xl lg:text-xl md:text-base md:text-right text-center ml-auto lg:leading-10 md:leading-8 leading-7">
                                         Follow real portfolios of people you trust. <br> Get insights on their investment decisions.
                                     </p>
 
-                                    <div class="mt-14 md:text-right text-center">
+                                    <div class="md:mt-14 mt-10 md:text-right text-center">
                                         <p class="mb-5 text-gray-100 xl:text-lg lg:text-base md:text-sm font-light">Get early access to the club</p>
-                                        <include src="components/subscribe-input.html" locals='{ "id": "getAccessHero", "classList": "w-4/6" }''></include>
+                                        <include src="components/subscribe-input.html" locals='{ "id": "getAccessHero", "classList": "lg:w-4/6 md:5/6" }''></include>
                                     </div>
                                 </div>
                             </main>
                         </div>
-                        <div class="relative z-10 self-center">
+                        <div class="relative z-10 self-center md:mt-0 mt-4">
                             <img class="xl:w-11/12 w-10/12 md:mr-auto md:mx-0 mx-auto" src="resources/icons/hero.png" alt="hero-image">
                         </div>
                     </div>
@@ -42,17 +42,15 @@
             <!-- Section 1 -->
             <div class="grid md:grid-cols-2 grid-cols-1 mb-32 gap-x-10">
                 <div class="self-center">
-                    <img class="lg:w-9/12 w-10/12 md:ml-auto md:mx-0 mx-auto" src="resources/icons/friend-pf.png" alt="Friends portfolio">
+                    <img class="lg:w-9/12 md:w-10/12 w-full md:ml-auto md:mx-0 mx-auto" src="resources/icons/friend-pf.png" alt="Friends portfolio">
                 </div>
-                <div class="md:text-left text-center md:min-h-96 relative my-auto md:mt-auto mt-10">
-                    <!-- <h2 class="text-gray-50 xl:text-4xl lg:text-3xl md:text-2xl text-3xl font-bold">See what your <br /><span class="text-alt-cyan">friends</span> are buying</h2>
-                    <p class="lg:w-3/4 text-gray-50 mt-5 md:ml-auto leading-8 lg:text-lg">View verified portfolios and read in-depth <br>analysis from people you follow.</p> -->
-                    <h2 class="text-gray-50 xl:text-5xl lg:text-3xl md:text-2xl text-3xl xl:leading-exl font-bold tracking-tight"><span class="text-alt-sand">View</span> your friend's <br> portfolio.</h2>
-                    <p class="lg:w-3/4 text-gray-50 mt-10 leading-8 lg:text-lg md:mr-auto xl:text-2xl xl:leading-10">View your friends’ portfolio and <br>see how they are performing. <br> Showcase your portfolio to win <br>bragging rights.</p>
+                <div class="md:text-left text-center md:min-h-96 relative my-auto md:mt-auto mt-4 feature-text feature-text-right">
+                    <h2><span class="text-alt-sand">View</span> your friend's <br> portfolio.</h2>
+                    <p>View your friends’ portfolio and <br>see how they are performing. <br> Showcase your portfolio to win <br>bragging rights.</p>
                     
                     <div class="left-0 bottom-0 md:mt-10 mt-10">
                         <span class="text-alt-sand tracking-widest xl:text-lg md:text-sm">IMPORT YOUR PORTFOLIOS FROM</span>
-                        <div class="flex space-x-5 mt-5 md:justify-start justify-center">
+                        <div class="flex md:space-x-5 space-x-3 mt-5 md:justify-start justify-center">
                             <img class="lg:h-i-lg md:h-10 h-12" src="resources/icons/kuvera.png" alt="Kevera app logo">
                             <img class="lg:h-i-lg md:h-10 h-12" src="resources/icons/paytmmoney.png" alt="PayTM Money logo">
                             <img class="lg:h-i-lg md:h-10 h-12" src="resources/icons/groww.png" alt="Groww app logo">
@@ -65,9 +63,9 @@
             <!-- Section 1 ends -->
             <!-- Section 2 -->
             <div class="md:grid md:grid-cols-2 grid-cols-1 md:flex-none flex flex-col-reverse mb-32 gap-x-10">
-                <div class="md:text-right text-center relative my-auto md:mt-auto mt-10">
-                    <h2 class="text-gray-50 xl:text-4xl lg:text-3xl md:text-2xl text-3xl font-bold">See what your <br /><span class="text-alt-cyan">friends</span> are buying</h2>
-                    <p class="lg:w-3/4 text-gray-50 mt-5 leading-8 lg:text-lg md:ml-auto">View verified portfolios and <br>read in-depth analysis from <br> people you follow.</p>
+                <div class="md:text-right text-center relative my-auto md:mt-auto mt-10 feature-text feature-text-left">
+                    <h2>See what your <br /><span class="text-alt-cyan">friends</span> are buying</h2>
+                    <p>View verified portfolios and <br>read in-depth analysis from <br> people you follow.</p>
 
                     <!-- <div class="md:absolute right-0 bottom-0 md:mt-0 mt-10">
                         <div class="flex items-center lg:space-x-5 md:space-x-3 space-x-2 xl:justify-start justify-center">
@@ -91,16 +89,16 @@
                 <div class="self-center">
                     <img class="lg:w-8/12 w-10/12 md:ml-auto md:mx-0 mx-auto" src="resources/icons/like-minded.png" alt="Liked minded people">
                 </div>
-                <div class="md:text-left text-center relative my-auto md:mt-auto mt-10">
-                    <h2 class="text-gray-50 xl:text-4xl lg:text-3xl md:text-2xl text-3xl font-bold"><span class="text-primary-font">Chat</span> with like-minded <br> people</h2>
-                    <p class="lg:w-3/4 text-gray-50 md:mr-auto mt-5 leading-8 lg:text-lg">Get nerdy about stocks with the people <br> you vibe with. <br> Build your own club, share great ideas, <br>compete on group leaderboards.<br> Fully Private. No spam ever. </p>
+                <div class="md:text-left text-center relative my-auto md:mt-auto mt-10 feature-text feature-text-right">
+                    <h2><span class="text-primary-font">Chat</span> with like-minded <br> people</h2>
+                    <p>Get nerdy about stocks with the people <br> you vibe with. <br> Build your own club, share great ideas, <br>compete on group leaderboards.<br> Fully Private. No spam ever. </p>
                 </div>
             </div>
             <!-- Section 3 ends -->
             <!-- Section 4 -->
             <div class="md:grid md:grid-cols-2 grid-cols-1 md:flex-none flex flex-col-reverse mb-16 gap-x-10">
-                <div class="md:text-right text-center relative my-auto md:mt-auto mt-10">
-                    <h2 class="text-gray-50 xl:text-5xl lg:text-3xl md:text-2xl text-3xl xl:leading-exl font-bold tracking-tight"><span class="text-alt-tangerine">Discover</span> your next<br> great investment idea</h2>
+                <div class="md:text-right text-center relative my-auto md:mt-auto mt-10 feature-text feature-text-left">
+                    <h2 class=""><span class="text-alt-tangerine">Discover</span> your next<br> great investment idea</h2>
                     <p class="lg:w-3/4 text-gray-50 mt-10 leading-8 lg:text-lg md:ml-auto xl:text-2xl xl:leading-10">Browse Mutual Funds, Stocks <br> and Ideas in one place. <br>Make instant decisons based <br>Share them with your club in one-click. </p>
                 </div>
                 <div class="self-center">
@@ -111,10 +109,10 @@
         </div>
         <!-- Content ends -->
         <!-- Backing -->
-        <div class="text-center py-16 relative">
+        <div class="text-center md:py-16 py-8 relative">
             <div>
                 <h2 class="text-gray-50 xl:text-4xl lg:text-3xl md:text-2xl text-2xl font-bold">Backed by the Best</h2>
-                <div class="inline-flex mx-auto space-x-32 my-16">
+                <div class="inline-flex mx-auto space-x-32 md:my-16 my-8">
                     <img class="lg:h-i-lg md:h-16 h-10" src="resources/icons/antler.png" alt="Antler logo">
                     <!-- <img class="lg:h-i-lg md:h-16 h-10" src="resources/icons/tpf.png" alt="The product folks logo"> -->
                 </div>
@@ -127,13 +125,13 @@
         <!-- Always there -->
         <div class="bg-secondary-bk pb-20 mt-16">
             <div class="mx-auto xl:w-5/12 lg:w-5/12 md:w-1/2 w-11/12 relative">
-                <div class="pb-32 phone md:pt-10 pt-5 px-10 relative z-10">
+                <div class="md:pb-32 pb-24 phone md:pt-10 pt-5 px-10 relative z-10">
                     <div class="text-center relative z-20">
-                        <h3 class="text-primary-font xl:text-4xl lg:text-xl md:text-lg text-3xl font-bold tracking-tight">We are always <br class="md:hidden block"> there for you</h3>
-                        <p class="text-gray-100 mt-10 xl:mb-10 lg:mb-16 mb-10 leading-8 xl:text-lg md:text-sm xl:leading-10">We know that investing your money is  scary.<br class="md:block hidden">Which is why we are available at the click of a button.<br class="md:block hidden">Ping us on Whatsapp or Request Callback<br class="md:block hidden">and we’ll get back to you ASAP.<br> <br>PS: You’ll be talking to a human, not a bot.</p>
+                        <h3 class="text-primary-font xl:text-4xl lg:text-2xl md:text-xl text-3xl font-bold tracking-tight md:leading-normal leading-relaxed">We are always <br class="md:hidden block"> there for you</h3>
+                        <p class="text-gray-100 mt-10 xl:mb-10 lg:mb-16 mb-10 md:leading-8 xl:text-lg md:text-sm lg:leading-10 leading-8">We know that investing your money is  scary.<br class="md:block hidden"> Which is why we are available at the click of a button.<br class="md:block hidden"> Ping us on Whatsapp or Request Callback <br class="md:block hidden">and we’ll get back to you ASAP.<br> <br>PS: You’ll be talking to a human, not a bot.</p>
                         <a href="#" class="bg-primary-btn px-6 py-4 rounded-2xl text-gray-100 block xl:w-7/12 lg:w-10/12 mx-auto xl:text-base md:text-sm btn font-bold">🤙 Hit us up on Whatsapp</a>
                     </div>
-                    <img class="md:hidden absolute left-0 top-0 w-full h-full" src="resources/icons/phone.svg" alt="Phone">
+                    <img class="md:hidden absolute left-0 top-0 w-full h-full" src="resources/icons/phone.png" alt="Phone">
                 </div>
                 <!-- Absolutely positioned waves -->
                 <img class="md:absolute md:block hidden bottom-20 left-0 transform -translate-x-3/4 lg:h-40 md:h-32" src="resources/icons/waves.svg" alt="waves">
@@ -146,14 +144,14 @@
         <div class="pt-48 pb-16 overflow-hidden">
             <div class="relative">
                 <div class="xl:w-6/12 lg:w-8/12 w-10/12 my-20 bg-alt-sand text-center py-16 md:px-24 px-10 text-gray-900 rounded-exl mx-auto relative">
-                    <h2 class="lg:text-4xl md:text-3xl text-2xl font-bold leading-relaxed tracking-tight xl:leading-exl">Not just another <br> investment app</h2> 
+                    <h2 class="md:text-4xl text-3xl font-bold leading-relaxed tracking-tight xl:leading-exl">Not just another <br> investment app</h2> 
                     <p class=" my-7 max-w-lg mx-auto font-medium text-lg leading-9">Everything is more fun with your friends. So we decided to build the investment app that we could use with our friends. Bumped up the fun to eleven, minus all the jargon.</p>
                     <span class="mb-2 block text-alt-aurelium">Get early access to the club</span>
-                    <include locals='{"id":"getAccessBanner"}' src="components/subscribe-input.html"></include>
+                    <include locals='{"id":"getAccessBanner", "classList": "md:w-auto w-full", "placeHolder": "Enter your number"}' src="components/subscribe-input.html"></include>
 
                     <!-- absolute positioned icons -->
                     <img class="absolute top-0 transform -translate-y-1/2 xl:left-16 left-8 md:h-28 h-24" src="resources/icons/badge.svg" alt="Money on my mind image">
-                    <img class="absolute left-0 bottom-16 transform md:-translate-x-3/4 -translate-x-1/2 md:h-20 h-16" src="resources/icons/wink.png" alt="wink girl">
+                    <img class="absolute left-0 md:bottom-16 bottom-1/3 transform md:-translate-x-3/4 -translate-x-1/2 md:h-20 h-12" src="resources/icons/wink.png" alt="wink girl">
                     <!-- absolute positioned icons ends -->
                 </div>
 

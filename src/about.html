@@ -6,30 +6,30 @@
         <div class="relative">
             <div class="md:max-w-7xl max-w-xs mx-auto">
                 <div class="mt-10">
-                    <h2 class="xl:text-6xl lg:text-4xl md:text-3xl text-4xl font-extrabold text-center text-gray-100 mb-14 tracking-tight">Ditch the Defaults</h2>
-                    <div class="text-center text-gray-100 text-xl font-normal leading-10 max-w-3xl mx-auto">
-                        <p>If investing can make you rich, then why doesn’t everyone do it? <br>Because it is boring. And filled with jargon.<br>It feels like shopping on Amazon, when it should feel like Instagram.</p>
-                        <br>
-                        <p>This is our way of showing a big fat finger to all of that. <br>We make investing infinitely more fun by keeping your friends in the loop.<br>We make finding investment ideas accessible, so that you get more control. <br> Oh, and all that jargon, you are definitely not going to miss it. <br> Join us and ditch the defaults, because you deserve better.</p>
+                    <h2 class="xl:text-6xl lg:text-4xl md:text-3xl text-4xl font-extrabold md:text-center text-left text-gray-100 md:mb-14 mb-8 tracking-tight">Ditch the Defaults</h2>
+                    <div class="md:text-center text-left text-gray-100 text-xl font-normal leading-10 max-w-3xl mx-auto">
+                        <p>If investing can make you rich, then why doesn’t everyone do it? <br class="md:block hidden">Because it is boring. And filled with jargon.<br class="md:block hidden">It feels like shopping on Amazon, when it should feel like Instagram.</p>
+                        <br >
+                        <p>This is our way of showing a big fat finger to all of that. <br class="md:block hidden">We make investing infinitely more fun by keeping your friends in the loop.<br class="md:block hidden">We make finding investment ideas accessible, so that you get more control. <br class="md:block hidden"> Oh, and all that jargon, you are definitely not going to miss it. <br class="md:block hidden"> Join us and ditch the defaults, because you deserve better.</p>
                     </div>
                 </div>
             </div>
             <img class="absolute xl:block hidden bottom-5 left-0" src="resources/icons/dots-hollow.svg" alt="hollow-dots">
             <img class="absolute xl:block hidden top-5 right-0" src="resources/icons/dots-hollow.svg" alt="hollow-dots">
         </div>
-        <div class="xl:max-w-7xl lg:max-w-3xl md:max-w-2xl max-w-xs mx-auto mb-20">
-            <div class="mt-32 max-w-7xl mx-auto mb-20">
-                <h2 class="xl:text-5xl lg:text-4xl md:text-3xl text-4xl font-extrabold text-center text-gray-100 mb-20 tracking-tight">
-                    Meet the nerds of Flow
+        <div class="xl:max-w-7xl lg:max-w-3xl md:max-w-2xl max-w-xs mx-auto md:mb-20 mb-16">
+            <div class="md:mt-32 mt-16 max-w-7xl mx-auto md:mb-20">
+                <h2 class="xl:text-5xl lg:text-4xl md:text-3xl text-4xl font-extrabold text-center text-gray-100 md:mb-20 mb-12 tracking-tight md:leading-normal leading-snug">
+                    Meet the <br class="md:hidden block"> nerds of Flow
                 </h2>
-                <div class="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-y-20 gap-x-16">
+                <div class="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 md:gap-y-20 gap-y-12 gap-x-16">
                     <each loop="nerd in nerds">
                         <div class="flex space-x-5">
                             <img class="h-28" src="{{  nerd.dp }}" alt="{{ nerd.name }}-dp">
                             <div>
                                 <h4 class="text-lg tracking-tight font-bold text-gray-200">{{ nerd.name }}</h4>
                                 <span class="uppercase text-primary-font text-xs my-3 block">{{ nerd.post }}</span>
-                                <p class="text-base text-gray-300 font-normal leading-7">{{ nerd.description }}</p>
+                                <p class="text-base text-gray-300 font-normal leading-7">{{{ nerd.description }}}</p>
                                 <div class="mt-5 flex space-x-3">
                                     <each loop="link in nerd.follow">
                                         <a href="{{ link.url }}">

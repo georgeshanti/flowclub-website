@@ -38,7 +38,8 @@ module.exports = {
         exl: '1.3em'
       },
       borderRadius: {
-        exl: '64px'
+        exl: '64px',
+        lx: '48px'
       }
     },
   },

@@ -5,6 +5,7 @@ module.exports = {
         "posthtml-extend": { "root": "./src" },
         "posthtml-include": { "root": "./src" },
         "posthtml-expressions": {
+            "strictMode": false,
             "locals": {
                 "nerds": nerds
             }
