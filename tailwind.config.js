@@ -25,7 +25,7 @@ module.exports = {
         }
       },
       height: {
-        "i-lg": '60px',
+        "i-lg": '49px',
         "i-xl": '70px'
       },
       margin: {
@@ -33,6 +33,12 @@ module.exports = {
       },
       padding: {
         'lg-height/2': '30px'
+      },
+      lineHeight: {
+        exl: '1.3em'
+      },
+      borderRadius: {
+        exl: '64px'
       }
     },
   },

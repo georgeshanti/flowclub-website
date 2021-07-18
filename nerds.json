@@ -1,97 +1,97 @@
 [
     {
         "name": "George Shanti",
-        "post": "Customer service",
+        "post": "CO-FOUNDER",
         "dp": "resources/nerds/shanti.png",
-        "description": "All things mobile at flowclub. Thinks he is good at strategy. Makes good tea.",
+        "description": "Makes sure Flow Club doesn’t crash.\n Spends all his money on his dog.\n Makes good tea.",
         "follow": [
             {
                 "icon": "resources/icons/002_twitter.svg",
-                "url": "https://link.twitter.com/aarathi"
+                "url": "https://twitter.com/GeorgeThomasSh3"
             },
             {
-                "icon": "resources/icons/003_instagram.svg",
-                "url": "https://link.twitter.com/aarathi"
+                "icon": "resources/icons/001_linkedin.svg",
+                "url": "https://www.linkedin.com/in/george-thomas-shanti-b5772611b/"
             }
         ]
     },
     {
         "name": "George Thomas",
-        "post": "Customer service",
-        "dp": "resources/nerds/shanti.png",
-        "description": "All things mobile at flowclub. Thinks he is good at strategy. Makes good tea.",
+        "post": "ENGINEERING",
+        "dp": "resources/nerds/kgt.png",
+        "description": "All things mobile at flowclub.\nCries while filing taxes.\nMakes horrible tea.",
         "follow": [
             {
                 "icon": "resources/icons/002_twitter.svg",
                 "url": "https://link.twitter.com/aarathi"
             },
             {
-                "icon": "resources/icons/003_instagram.svg",
-                "url": "https://link.twitter.com/aarathi"
+                "icon": "resources/icons/001_linkedin.svg",
+                "url": "https://www.linkedin.com/in/k-george-thomas/"
             }
         ]
     },
     {
         "name": "Gokul Harikumar",
-        "post": "Customer service",
-        "dp": "resources/nerds/shanti.png",
-        "description": "All things mobile at flowclub. Thinks he is good at strategy. Makes good tea.",
+        "post": "CO-FOUNDER",
+        "dp": "resources/nerds/gokul.png",
+        "description": "Makes Flow Club look beautiful.\nLikes working on minimum wages.\nDrinks tea.",
         "follow": [
             {
                 "icon": "resources/icons/002_twitter.svg",
-                "url": "https://link.twitter.com/aarathi"
+                "url": "https://twitter.com/GokulHK"
             },
             {
-                "icon": "resources/icons/003_instagram.svg",
-                "url": "https://link.twitter.com/aarathi"
+                "icon": "resources/icons/001_linkedin.svg",
+                "url": "https://www.linkedin.com/in/gokul-harikumar/"
             }
         ]
     },
     {
         "name": "Gopikrishnan Mohan",
-        "post": "Customer service",
-        "dp": "resources/nerds/shanti.png",
-        "description": "All things mobile at flowclub. Thinks he is good at strategy. Makes good tea.",
+        "post": "CO-FOUNDER",
+        "dp": "resources/nerds/gopi.png",
+        "description": "Thinks he is good at strategy.\nBuys a gadget every month coz YOLO.\nHates tea.",
         "follow": [
             {
                 "icon": "resources/icons/002_twitter.svg",
-                "url": "https://link.twitter.com/aarathi"
+                "url": "https://twitter.com/gopikm0"
             },
             {
-                "icon": "resources/icons/003_instagram.svg",
-                "url": "https://link.twitter.com/aarathi"
+                "icon": "resources/icons/001_linkedin.svg",
+                "url": "https://www.linkedin.com/in/gopikm/"
             }
         ]
     },
     {
         "name": "Monica Eugene",
-        "post": "Customer service",
-        "dp": "resources/nerds/shanti.png",
-        "description": "All things mobile at flowclub. Thinks he is good at strategy. Makes good tea.",
+        "post": "ENGINEERING",
+        "dp": "resources/nerds/monica.png",
+        "description": "Adds semi colons to code.\nBroke 29 days a month.<br> Is Team Coffee.",
         "follow": [
             {
                 "icon": "resources/icons/002_twitter.svg",
                 "url": "https://link.twitter.com/aarathi"
             },
             {
-                "icon": "resources/icons/003_instagram.svg",
+                "icon": "resources/icons/001_linkedin.svg",
                 "url": "https://link.twitter.com/aarathi"
             }
         ]
     },
     {
         "name": "Mrinalini Rabindranath",
-        "post": "Customer service",
-        "dp": "resources/nerds/shanti.png",
-        "description": "All things mobile at flowclub. Thinks he is good at strategy. Makes good tea.",
+        "post": "MARKETING",
+        "dp": "resources/nerds/minnu.png",
+        "description": "Thinks she is the funniest.\nWorks to fund her peri peri addiction.\nCollects tea cups.",
         "follow": [
             {
                 "icon": "resources/icons/002_twitter.svg",
-                "url": "https://link.twitter.com/aarathi"
+                "url": "https://twitter.com/mrinininininini"
             },
             {
-                "icon": "resources/icons/003_instagram.svg",
-                "url": "https://link.twitter.com/aarathi"
+                "icon": "resources/icons/001_linkedin.svg",
+                "url": "https://www.linkedin.com/in/mrinalini-rabindranath-6921221a6/"
             }
         ]
     }
