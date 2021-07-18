@@ -9,12 +9,14 @@
   "scripts": {
     "clean": "rm dist/bundle.js",
     "start": "parcel src/index.html src/about.html --no-cache",
-    "build-prod": "parcel build src/index.html src/about.html --no-cache"
+    "build-prod": "parcel build src/index.html src/about.html --no-cache --out-dir docs/"
   },
   "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.14.3",
     "@babel/preset-env": "^7.14.2",
+    "@fullhuman/postcss-purgecss": "^3.0.0",
+    "@tailwindcss/postcss7-compat": "^2.2.4",
     "autoprefixer": "^9.8.6",
     "eslint": "^7.26.0",
     "parcel-bundler": "^1.12.5",
