@@ -1,4 +1,7 @@
-<extends src="base.html">
+<extends src="base.html" locals='{"link": "home"}'>
+    <block name="header-wrapper">
+        <include src="components/header.html" locals='{"link": "home"}'></include>}
+    </block>
     <block name="content">
         <div class="relative">
             <div class="max-w-7xl mx-auto">
