@@ -35,6 +35,14 @@ window.onload = () => {
     });
 };
 
+function cleanupModal () {
+    setModalLoader(false);
+    setModalTitle(false);
+    setModalInputArea(false);
+    setModalInputPlaceHolder("");
+    setModalInputValue("");
+}
+
 function openModal (targetElement, callBack) {
     console.log('Showing modal');
 
@@ -50,6 +58,8 @@ function openModal (targetElement, callBack) {
     modalCloseButton.addEventListener('click', function () {
         modal.classList.add('hidden');
         overlay.classList.add('hidden');
+
+        cleanupModal();
 
         modalCloseButton.removeEventListener('click', this);
     });
@@ -81,7 +91,7 @@ function setModalLoader (visibility) {
 }
 
 function setModalInputPlaceHolder (placeholderString) {
-    document.querySelector("#userInput").placeHolder = placeholderString;
+    document.querySelector("#userInput").setAttribute("placeholder", placeholderString);
 }
 
 function validatePhoneNumber (phoneNumber) {
@@ -246,7 +256,7 @@ function submitEmail (email, phoneNumber, token) {
         if (resp.code === 2000) {
             thankUser();
         } else {
-            showErrorMessage("Error while submitting email");
+            setModalErrorMessage("Error while submitting email");
         }
     })
 }

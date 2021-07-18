@@ -1,10 +1,10 @@
-<div class="absolute max-w-lg mx-auto top-0 bg-white z-20 hidden" id="modal">
-    <button id="closeModal" class="block">Close</button>
-    <div>
-        <h2 id="modalTitle" class="hidden"></h2>
-        <div id="inputArea" class="hidden">
-            <input type="text" id="userInput" >
-            <button id="userInputSubmit">Submit</button>
+<div class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 max-w-lg mx-auto top-0 bg-white z-20 hidden w-1/4 h-auto rounded-3xl bg-primary-bk" id="modal">
+    <button id="closeModal" class="absolute top-0 right-0 pt-1 pr-1 pr-1 pr-3 pt-1 right-0 text-3xl text-gray-100 top-0">&times;</button>
+    <div class="p-5 w-full">
+        <h2 id="modalTitle" class="hidden font-bold text-2xl text-primary-font"></h2>
+        <div id="inputArea" class="hidden inline-flex bg-white py-1 px-1 pl-3 items-center rounded-md border-2 border-primary-btn mt-10">
+            <input type="text" id="userInput" class="focus:outline-none px-1 text-gray-800 md:w-auto w-32">
+            <button id="userInputSubmit" class="bg-primary-btn text-gray-100 md:px-7 px-5 py-2 rounded-md uppercase text-xs">Submit</button>
         </div>
         <div id="successMessage" class="hidden"></div>
         <div id="modalLoader" class="hidden">Loading</div>
