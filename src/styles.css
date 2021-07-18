@@ -2,6 +2,18 @@
 
 @tailwind components;
 
+#navbar a {
+    @apply hover:text-primary-font;
+}
+
+#footerLinks a {
+    @apply hover:underline;
+}
+
+button, .btn {
+    @apply active:bg-banner-bk hover:bg-btn-hover;
+}
+
 @tailwind utilities;
 
 @media screen and (min-width: 768px) {

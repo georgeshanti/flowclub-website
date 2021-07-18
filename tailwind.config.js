@@ -15,6 +15,7 @@ module.exports = {
         "primary-btn": "#9555ff",
         "secondary-bk": '#230845',
         "banner-bk": '#2A0C5A',
+        "btn-hover": '#6829D1',
         "alt": {
           "cyan": '#2bcae0',
           "tangerine": "#f07d53",
@@ -36,7 +37,9 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      backgroundColor: [ 'active' ]
+    },
   },
   plugins: [],
 }

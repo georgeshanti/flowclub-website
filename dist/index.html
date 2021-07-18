@@ -16,7 +16,7 @@
         <!-- Nav -->
 <div class="max-w-7xl mx-auto">
     <div class="relative">
-        <div class="lg:w-full">
+        <div class="lg:w-full" id="navbar">
             <div class="relative py-3 px-4 sm:px-6 lg:px-8 lg:bg-transparent bg-secondary-bk z-10">
                 <nav class="relative flex items-center justify-between sm:h-10" aria-label="Global">
                     <div class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
@@ -223,7 +223,7 @@
                     <div class="text-center relative z-20">
                         <h3 class="text-primary-font xl:text-2xl lg:text-xl md:text-lg text-3xl">We are always <br class="md:hidden block"> there for you</h3>
                         <p class="text-gray-100 mt-10 xl:mb-20 lg:mb-16 mb-10 leading-8 xl:text-lg md:text-sm">We know that investing your money is  scary.<br class="md:block hidden">Which is why we are available at the click of a button.<br class="md:block hidden">Ping us on Whatsapp or Request Callback<br class="md:block hidden">and we’ll get back to you ASAP.<br>PS: You’ll be talking to a human, not a bot.</p>
-                        <a href="#" class="bg-primary-btn px-6 py-4 rounded-2xl text-gray-100 block xl:w-7/12 lg:w-10/12 mx-auto xl:text-base md:text-sm">🤙 Hit us up on Whatsapp</a>
+                        <a href="#" class="bg-primary-btn px-6 py-4 rounded-2xl text-gray-100 block xl:w-7/12 lg:w-10/12 mx-auto xl:text-base md:text-sm btn">🤙 Hit us up on Whatsapp</a>
                     </div>
                     <img class="md:hidden absolute left-0 top-0 w-full h-full" src="/phone.bf7e509c.svg" alt="Phone">
                 </div>
@@ -288,7 +288,7 @@
             </div>
         </div>
         <hr class="border-white opacity-50 mb-lg-height/2">
-        <div class="xl:flex xl:justify-between xl:text-left text-center md:px-0 px-5">
+        <div class="xl:flex xl:justify-between xl:text-left text-center md:px-0 px-5" id="footerLinks">
             <div>
                 <div class="md:flex md:space-x-10 xl:justify-start md:justify-center grid grid-rows-2 md:grid-cols-none grid-flow-col md:w-auto w-3/4 gap-y-3 text-left">
                     <a class="text-gray-300 font-thin" href="#">Privacy Policy</a>
@@ -313,7 +313,7 @@
 </div>
 <!-- Footer ends -->
         <div class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 max-w-lg mx-auto top-0 bg-white z-20 hidden w-1/4 h-auto rounded-3xl bg-primary-bk" id="modal">
-    <button id="closeModal" class="absolute top-0 right-0 pt-1 pr-1 pr-1 pr-3 pt-1 right-0 text-3xl text-gray-100 top-0">&times;</button>
+    <a id="closeModal" class="absolute top-0 right-0 pt-1 pr-1 pr-1 pr-3 pt-1 right-0 text-3xl text-gray-100 top-0 cursor-pointer">&times;</a>
     <div class="p-5 w-full">
         <h2 id="modalTitle" class="hidden font-bold text-2xl text-primary-font"></h2>
         <div id="inputArea" class="hidden inline-flex bg-white py-1 px-1 pl-3 items-center rounded-md border-2 border-primary-btn mt-10">
