@@ -1,0 +1,98 @@
+[
+    {
+        "name": "George Shanti",
+        "post": "Customer service",
+        "dp": "resources/nerds/shanti.png",
+        "description": "All things mobile at flowclub. Thinks he is good at strategy. Makes good tea.",
+        "follow": [
+            {
+                "icon": "resources/icons/002_twitter.svg",
+                "url": "https://link.twitter.com/aarathi"
+            },
+            {
+                "icon": "resources/icons/003_instagram.svg",
+                "url": "https://link.twitter.com/aarathi"
+            }
+        ]
+    },
+    {
+        "name": "George Thomas",
+        "post": "Customer service",
+        "dp": "resources/nerds/shanti.png",
+        "description": "All things mobile at flowclub. Thinks he is good at strategy. Makes good tea.",
+        "follow": [
+            {
+                "icon": "resources/icons/002_twitter.svg",
+                "url": "https://link.twitter.com/aarathi"
+            },
+            {
+                "icon": "resources/icons/003_instagram.svg",
+                "url": "https://link.twitter.com/aarathi"
+            }
+        ]
+    },
+    {
+        "name": "Gokul Harikumar",
+        "post": "Customer service",
+        "dp": "resources/nerds/shanti.png",
+        "description": "All things mobile at flowclub. Thinks he is good at strategy. Makes good tea.",
+        "follow": [
+            {
+                "icon": "resources/icons/002_twitter.svg",
+                "url": "https://link.twitter.com/aarathi"
+            },
+            {
+                "icon": "resources/icons/003_instagram.svg",
+                "url": "https://link.twitter.com/aarathi"
+            }
+        ]
+    },
+    {
+        "name": "Gopikrishnan Mohan",
+        "post": "Customer service",
+        "dp": "resources/nerds/shanti.png",
+        "description": "All things mobile at flowclub. Thinks he is good at strategy. Makes good tea.",
+        "follow": [
+            {
+                "icon": "resources/icons/002_twitter.svg",
+                "url": "https://link.twitter.com/aarathi"
+            },
+            {
+                "icon": "resources/icons/003_instagram.svg",
+                "url": "https://link.twitter.com/aarathi"
+            }
+        ]
+    },
+    {
+        "name": "Monica Eugene",
+        "post": "Customer service",
+        "dp": "resources/nerds/shanti.png",
+        "description": "All things mobile at flowclub. Thinks he is good at strategy. Makes good tea.",
+        "follow": [
+            {
+                "icon": "resources/icons/002_twitter.svg",
+                "url": "https://link.twitter.com/aarathi"
+            },
+            {
+                "icon": "resources/icons/003_instagram.svg",
+                "url": "https://link.twitter.com/aarathi"
+            }
+        ]
+    },
+    {
+        "name": "Mrinalini Rabindranath",
+        "post": "Customer service",
+        "dp": "resources/nerds/shanti.png",
+        "description": "All things mobile at flowclub. Thinks he is good at strategy. Makes good tea.",
+        "follow": [
+            {
+                "icon": "resources/icons/002_twitter.svg",
+                "url": "https://link.twitter.com/aarathi"
+            },
+            {
+                "icon": "resources/icons/003_instagram.svg",
+                "url": "https://link.twitter.com/aarathi"
+            }
+        ]
+    }
+]

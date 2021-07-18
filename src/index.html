@@ -1,0 +1,178 @@
+<extends src="base.html">
+    <block name="content">
+        <div class="relative">
+            <div class="max-w-7xl mx-auto">
+                <div class="relative overflow-hidden">
+                    <!-- Main section -->
+                    <div class="grid md:grid-cols-2 mt-10 mb-20 gap-x-10">
+                        <div class="relative z-10 pb-8 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
+                            <main class="mt-10 mx-auto max-w-7xl sm:mt-12 md:mt-16 lg:mt-20 xl:mt-28">
+                                <div class="">
+                                    <h1 class="xl:text-6xl lg:text-4xl md:text-3xl text-4xl tracking-tight font-extrabold text-primary-font md:text-right text-center">
+                                        <span class="block mb-6">Invest with </span>
+                                        <span>your friends</span>
+                                    </h1>
+                                    <p class="md:mt-14 mt-10 text-base text-gray-50 xl:text-2xl lg:text-lg md:text-base md:text-right text-center ml-auto">
+                                        Follow real portfolios of people you trust. <br> Get insights on their investment decisions.
+                                    </p>
+
+                                    <div class="mt-14 md:text-right text-center">
+                                        <p class="mb-5 text-gray-100 xl:text-lg lg:text-base md:text-sm">Get on the waitlist and reserve your username</p>
+                                        <include src="components/subscribe-input.html"></include>
+                                    </div>
+                                </div>
+                            </main>
+                        </div>
+                        <div class="relative z-10">
+                            <img class="w-10/12 md:mr-auto md:mx-0 mx-auto" src="resources/icons/hero.png" alt="hero-image">
+                        </div>
+                    </div>
+                    <!-- Main Ends -->
+                </div>
+            </div>
+            <div class="md:absolute lg:block hidden right-0 bottom-0 z-0">
+                <img class="lg:h-96 md:h-80" src="resources/icons/rounded-star.svg" alt="rounded star">
+            </div>
+        </div>
+        <!-- Content -->
+        <div class="lg:max-w-7xl max-w-xs mx-auto mt-32">
+            <!-- Section 1 -->
+            <div class="grid md:grid-cols-2 grid-cols-1 mb-32 gap-x-10">
+                <div class="">
+                    <img class="w-10/12 md:ml-auto md:mx-0 mx-auto" src="resources/icons/friend-pf.png" alt="Friends portfolio">
+                </div>
+                <div class="md:text-left text-center md:h-96 relative my-auto">
+                    <!-- <h2 class="text-gray-50 xl:text-4xl lg:text-3xl md:text-2xl text-3xl font-bold">See what your <br /><span class="text-alt-cyan">friends</span> are buying</h2>
+                    <p class="lg:w-3/4 text-gray-50 mt-5 md:ml-auto leading-8 lg:text-lg">View verified portfolios and read in-depth <br>analysis from people you follow.</p> -->
+                    <h2 class="text-gray-50 xl:text-4xl lg:text-3xl md:text-2xl text-3xl font-bold"><span class="text-alt-sand">View</span> your friend's <br> portfolio.</h2>
+                    <p class="lg:w-3/4 text-gray-50 mt-5 leading-8 lg:text-lg md:mr-auto">View your friends’ portfolio and <br>see how they are performing. <br> Showcase your portfolio to win <br>bragging rights</p>
+                    
+.
+
+.
+                    
+                    
+                    <div class="md:absolute left-0 bottom-0 md:mt-0 mt-10">
+                        <span class="text-alt-sand tracking-widest xl:text-lg md:text-sm">IMPORT YOUR PORTFOLIOS FROM</span>
+                        <div class="flex space-x-5 mt-5 md:justify-start justify-center">
+                            <img class="lg:h-i-lg md:h-10 h-12" src="resources/icons/icici.png" alt="ICICI bank logo">
+                            <img class="lg:h-i-lg md:h-10 h-12" src="resources/icons/aditya_birla.png" alt="ICICI bank logo">
+                            <img class="lg:h-i-lg md:h-10 h-12" src="resources/icons/nippon.png" alt="ICICI bank logo">
+                            <img class="lg:h-i-lg md:h-10 h-12" src="resources/icons/axis_white.svg" alt="ICICI bank logo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Section 1 ends -->
+            <!-- Section 2 -->
+            <div class="grid md:grid-cols-2 grid-cols-1 mb-32 gap-x-10">
+                <div class="md:text-right text-center md:h-96 relative my-auto">
+                    <h2 class="text-gray-50 xl:text-4xl lg:text-3xl md:text-2xl text-3xl font-bold">See what your <br /><span class="text-alt-cyan">friends</span> are buying</h2>
+                    <p class="lg:w-3/4 text-gray-50 mt-5 leading-8 lg:text-lg md:ml-auto">View verified portfolios and <br>read in-depth analysis from <br> people you follow.</p>
+
+                    <!-- <div class="md:absolute right-0 bottom-0 md:mt-0 mt-10">
+                        <div class="flex items-center lg:space-x-5 md:space-x-3 space-x-2 xl:justify-start justify-center">
+                            <div class="lg:h-i-lg md:h-10 h-12">
+                                <svg class="h-full" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 64 64">
+                                    <rect width="64" height="64" fill="#fff" opacity=".1" rx="20"/>
+                                    <path fill="#B68CFB" d="M44 47h-3v-3c0-1.194-.474-2.338-1.318-3.182-.844-.844-1.989-1.318-3.182-1.318h-9c-1.194 0-2.338.474-3.182 1.318C23.474 41.662 23 42.807 23 44v3h-3v-3c0-1.99.79-3.897 2.197-5.303C23.603 37.29 25.51 36.5 27.5 36.5h9c1.99 0 3.897.79 5.303 2.197C43.21 40.103 44 42.01 44 44v3zM32 33.5c-1.182 0-2.352-.233-3.444-.685-1.092-.452-2.084-1.115-2.92-1.951-.836-.836-1.499-1.828-1.95-2.92C23.232 26.852 23 25.682 23 24.5s.233-2.352.685-3.444c.452-1.092 1.115-2.084 1.951-2.92.836-.836 1.828-1.499 2.92-1.95 1.092-.453 2.262-.686 3.444-.686 2.387 0 4.676.948 6.364 2.636C40.052 19.824 41 22.113 41 24.5s-.948 4.676-2.636 6.364C36.676 32.552 34.387 33.5 32 33.5zm0-3c1.591 0 3.117-.632 4.243-1.757C37.368 27.617 38 26.09 38 24.5c0-1.591-.632-3.117-1.757-4.243C35.117 19.132 33.59 18.5 32 18.5c-1.591 0-3.117.632-4.243 1.757C26.632 21.383 26 22.91 26 24.5c0 1.591.632 3.117 1.757 4.243C28.883 29.868 30.41 30.5 32 30.5z"/>
+                                </svg>
+                            </div>
+                            <span class="text-alt-cyan text-primary-font uppercase tracking-widest h-auto xl:text-lg md:text-sm">Public clubs dropping soon 🔥</span>                                
+                        </div>
+                    </div> -->
+                </div>
+                <div>
+                    <img class="w-10/12 md:mr-auto md:mx-0 mx-auto" src="resources/icons/friends-buy.png" alt="Friends buying">
+                </div>
+            </div>
+            <!-- Section 2 ends -->
+            <!-- Section 3 -->
+            <div class="grid md:grid-cols-2 grid-cols-1 mb-32">
+                <div class="md:text-right text-center md:h-96 relative">
+                    <h2 class="text-gray-50 xl:text-4xl lg:text-3xl md:text-2xl text-3xl font-bold"><span class="text-alt-tangerine">Discover</span> your next <br> great investment idea</h2>
+                    <p class="lg:w-3/4 text-gray-50 ml-auto mt-5 leading-8 lg:text-lg">Browse Mutual Funds, Stocks <br> and Ideas in one place. <br> Share them with your club in one-click. </p>
+                </div>
+            </div>
+            <!-- Section 3 ends -->
+            <!-- Section 4 -->
+            <div class="grid md:grid-cols-2 grid-cols-1 mb-32">
+                <div></div>
+                <div class="md:text-left text-center md:h-96 relative">
+                    <h2 class="text-gray-50 xl:text-4xl lg:text-3xl md:text-2xl text-3xl font-bold"><span class="text-alt-sand">Immersive Feed</span><br> that speaks to you</h2>
+                    <p class="lg:w-3/4 text-gray-50 mr-auto mt-5 leading-8 lg:text-lg">Stay up to date on your interests <br> and discover new ones. <br>Make instant decisons based <br>on what you learn.</p>
+                </div>
+            </div>
+            <!-- Section 4 ends -->
+        </div>
+        <!-- Content ends -->
+        <!-- Backing -->
+        <div class="text-center py-48 relative">
+            <div>
+                <h2 class="text-gray-50 xl:text-4xl lg:text-3xl md:text-2xl text-2xl font-bold">Backed by the Best</h2>
+                <div class="inline-flex mx-auto space-x-32 my-20">
+                    <img class="lg:h-i-lg md:h-16 h-10" src="resources/icons/antler.png" alt="Antler logo">
+                    <!-- <img class="lg:h-i-lg md:h-16 h-10" src="resources/icons/tpf.png" alt="The product folks logo"> -->
+                </div>
+                <a class="block text-gray-100 xl:text-lg lg:text-base">Curious? Read more about us <span class="ml-1">&rarr;</span></a>
+            </div>
+            <img class="md:absolute md:block hidden right-0 bottom-24 lg:h-auto md:h-36" src="resources/icons/dots-hollow.svg" alt="dots hollow">
+            <img class="md:absolute md:block hidden left-0 top-24 lg:h-auto md:h-36" src="resources/icons/dots-filled.svg" alt="dots filled">
+        </div>
+        <!-- Backing ends -->
+        <!-- Always there -->
+        <div class="bg-secondary-bk pb-20">
+            <div class="mx-auto xl:w-1/3 lg:w-5/12 md:w-1/2 w-11/12 relative">
+                <div class="pb-20 phone md:pt-10 pt-5 px-10 relative z-10">
+                    <div class="text-center relative z-20">
+                        <h3 class="text-primary-font xl:text-2xl lg:text-xl md:text-lg text-3xl">We are always <br class="md:hidden block"> there for you</h3>
+                        <p class="text-gray-100 mt-10 xl:mb-20 lg:mb-16 mb-10 leading-8 xl:text-lg md:text-sm">We know that investing your money is  scary.<br class="md:block hidden">Which is why we are available at the click of a button.<br class="md:block hidden">Ping us on Whatsapp or Request Callback<br class="md:block hidden">and we’ll get back to you ASAP.<br>PS: You’ll be talking to a human, not a bot.</p>
+                        <a href="#" class="bg-primary-btn px-6 py-4 rounded-2xl text-gray-100 block xl:w-7/12 lg:w-10/12 mx-auto xl:text-base md:text-sm">🤙 Hit us up on Whatsapp</a>
+                    </div>
+                    <img class="md:hidden absolute left-0 top-0 w-full h-full" src="resources/icons/phone.svg" alt="Phone">
+                </div>
+                <!-- Absolutely positioned waves -->
+                <img class="md:absolute md:block hidden bottom-20 left-0 transform -translate-x-3/4 lg:h-40 md:h-32" src="resources/icons/waves.svg" alt="waves">
+                <img class="md:absolute md:block hidden top-10 right-0 transform translate-x-3/4 lg:h-40 md:h-32" src="resources/icons/waves.svg" alt="waves">
+                <!-- Absolutely positioned waves end -->
+            </div>
+        </div>
+        <!-- Always there ends -->
+        <!-- Not just another app -->
+        <div class="pt-52 pb-28 overflow-hidden">
+            <div class="relative">
+                <div class="xl:w-6/12 lg:w-8/12 w-10/12 my-20 bg-alt-sand text-center py-20 md:px-24 px-10 text-gray-900 rounded-3xl mx-auto relative">
+                    <h2 class="lg:text-4xl md:text-3xl text-2xl font-bold leading-relaxed">Not just another <br> investment app</h2> 
+                    <p class=" my-7 max-w-md mx-auto leading-7">Join the club with something and a line that is too long for one line and so flows over to the second line.</p>
+                    <span class="mb-2 block text-alt-aurelium">Get on the waitlist and reserve your username</span>
+                    <include src="components/subscribe-input.html"></include>
+
+                    <!-- absolute positioned icons -->
+                    <img class="absolute top-0 transform -translate-y-1/2 xl:left-16 left-8 md:h-28 h-24" src="resources/icons/badge.svg" alt="Money on my mind image">
+                    <img class="absolute left-0 bottom-16 transform md:-translate-x-3/4 -translate-x-1/2 md:h-20 h-16" src="resources/icons/wink.png" alt="wink girl">
+                    <!-- absolute positioned icons ends -->
+                </div>
+
+                <!-- Absolutely positioned cards  -->
+                <div class="absolute xl:w-4/12 w-2/12 md-w-0 h-full top-0 left-0 transform scale-y-75 -translate-x-1/2">
+                    <div class="inset-0 absolute bg-alt-sand lg:opacity-10 opacity-0 rounded-3xl"></div>
+                    <img class="absolute top-0 right-0 transform scale-y-125 -translate-y-full h-16 xl:right-10 lg:-right-10 md:-right-5 -right-8" src="resources/icons/capped.png" alt="capped guy">
+                </div>
+                <div class="absolute xl:w-4/12 w-2/12 h-full top-0 right-0 transform scale-y-75 translate-x-1/2 rounded-3xl">
+                    <div class="inset-0 absolute bg-alt-sand lg:opacity-10 opacity-0 rounded-3xl"></div>
+                    <img class="absolute top-1/2 left-0 transform scale-y-125 -translate-y-1/2 -translate-x-1/4 h-16" src="resources/icons/victory.png" alt="victory girl">
+                </div>
+                <!-- Absolutely positioned cards end -->
+                <!-- Absolutely positioned icons -->
+                <div class="-translate-x-1/2 -translate-y-36 absolute left-1/2 top-0 transform">
+                    <img class="h-20" src="resources/icons/you.png" alt="amazing you">
+                    <img class="absolute left-1/2 top-1/2 transform translate-x-10 translate-y-9 h-9" src="resources/icons/you-text.svg" alt="You chat bubble">
+                </div>
+                <img class="absolute lg:top-0 lg:bottom-auto md:bottom-0 bottom-0 lg:right-16 md:right-5 right-5 transform lg:-translate-y-40 translate-y-1/2 md:h-24 h-20" src="resources/icons/fingers-crossed.png" alt="fingers crossed guy">
+                <!-- Absolutely positioned icons end -->
+            </div>
+        </div>
+        <!-- Not just another app ends -->
+        <script src="index.js"></script>
+    </block>
+</extends>
