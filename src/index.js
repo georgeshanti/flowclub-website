@@ -35,12 +35,16 @@ window.onload = () => {
     });
 };
 
+let modalClose, phoneNumberTextBox;
+
 function cleanupModal () {
     setModalLoader(false);
     setModalTitle(false);
     setModalInputArea(false);
     setModalInputPlaceHolder("");
     setModalInputValue("");
+    setModalInfoMessage("");
+    setModalErrorMessage("");
 }
 
 function openModal (targetElement, callBack) {
@@ -50,19 +54,24 @@ function openModal (targetElement, callBack) {
     let overlay = document.querySelector('#modalOverlay');
     let modalCloseButton = document.querySelector('#closeModal');
 
-    callBack && callBack(targetElement);
+    phoneNumberTextBox = targetElement;
 
     modal.classList.remove('hidden');
     overlay.classList.remove('hidden');
 
-    modalCloseButton.addEventListener('click', function () {
+    modalClose = () => {
         modal.classList.add('hidden');
         overlay.classList.add('hidden');
 
         cleanupModal();
 
-        modalCloseButton.removeEventListener('click', this);
-    });
+        modalCloseButton.removeEventListener('click', modalClose);
+    };
+
+    modalCloseButton.addEventListener('click', modalClose);
+
+    callBack && callBack(targetElement);
+
 }
 
 function setModalTitle (title) {
@@ -130,6 +139,17 @@ function setModalInputValue (value) {
     document.querySelector('#userInput').value = value;
 }
 
+function setModalInfoMessage (message) {
+    const messageArea = document.querySelector('#modalMessage');
+    messageArea.innerHTML = message;
+
+    if (message) {
+        messageArea.classList.remove('hidden');
+    } else {
+        messageArea.classList.add('hidden');
+    }
+}
+
 function sendOtp (target) {
     const targetInputSelector = `#${target.id}-input`;
 
@@ -141,7 +161,7 @@ function sendOtp (target) {
     }
 
     setModalLoader(true);
-    // let value = getModalUserInput();
+
     fetch(`${HOST}/waitlist/send_otp/${phoneNumber}`)
     .then(resp => resp.json())
     .then(resp => {
@@ -150,8 +170,10 @@ function sendOtp (target) {
 
         if (resp.code === 2000) {
             collectOTP(phoneNumber);
+
+            return true;
         } else {
-            setModalErrorMessage("Something went wrong from our side");
+            setModalErrorMessage("Something went wrong from our end. Please try again later");
         }
     })
     .catch(resp => {
@@ -165,16 +187,20 @@ function collectOTP (phoneNumber) {
     setModalInputArea(true);
     setModalInputPlaceHolder("OTP");
 
-    onSubmitButtonClicked(function () {
+    const onOTPSubmitCallback = () => {
         const otp = getModalUserInput();
 
         if (otp) {
-            verifyOTP(otp, phoneNumber);
-            removeSubmitEventListener(this);
+            verifyOTP(otp, phoneNumber)
+            .then((isSuccessful) => {
+                isSuccessful && removeSubmitEventListener(onOTPSubmitCallback);
+            });
         } else {
             setModalErrorMessage("Invalid OTP");
         }
-    });
+    };
+
+    onSubmitButtonClicked(onOTPSubmitCallback);
 }
 
 
@@ -188,9 +214,10 @@ function verifyOTP (otp, phoneNumber) {
         utm_source: params.get('utm_source')
     };
 
+    setModalInputArea(false);
     setModalLoader(true);
 
-    fetch(`${HOST}/waitlist/${phoneNumber}`, {
+    return fetch(`${HOST}/waitlist/${phoneNumber}`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -208,33 +235,42 @@ function verifyOTP (otp, phoneNumber) {
             } else {
                 thankUser();
             }
+            
+            return true;
         } else {
+            setModalInputArea(true);
             setModalErrorMessage("Invalid OTP");
         }
     })
     .catch(() => {
         setModalLoader(false);
+        setModalInputArea(true);
         setModalErrorMessage("Something went wrong while submitting OTP");
     });
 }
 
 function collectEmail (phoneNumber, token) {
     setModalTitle("Email");
+    setModalInputArea(true);
     setModalErrorMessage("");
     setModalInputValue("");
 
     setModalInputPlaceHolder("Email");
 
-    onSubmitButtonClicked(function () {
+    const onEmailSubmitCallback = () => {
         const email = getModalUserInput();
 
         if (email) {
-            submitEmail(email, phoneNumber, token);
-            removeSubmitEventListener(this);
+            submitEmail(email, phoneNumber, token)
+            .then((isSuccessful) => {
+                isSuccessful && removeSubmitEventListener(onEmailSubmitCallback);
+            });
         } else {
             setModalErrorMessage("Invalid email");
         }
-    });
+    };
+
+    onSubmitButtonClicked(onEmailSubmitCallback);
 }
 
 function submitEmail (email, phoneNumber, token) {
@@ -242,9 +278,10 @@ function submitEmail (email, phoneNumber, token) {
         token
     };
 
+    setModalInputArea(false);
     setModalLoader(true);
 
-    fetch(`${HOST}/${phoneNumber}/${window.encodeURIComponent(email)}`, {
+    return fetch(`${HOST}/${phoneNumber}/${window.encodeURIComponent(email)}`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -253,16 +290,39 @@ function submitEmail (email, phoneNumber, token) {
     })
     .then(resp => resp.json())
     .then(resp => {
+        setModalLoader(false);
         if (resp.code === 2000) {
             thankUser();
+
+            return true;
         } else {
+            setModalInputArea(true);
             setModalErrorMessage("Error while submitting email");
         }
     })
+    .catch(() => {
+        setModalInputArea(true);
+        setModalLoader(false)
+        setModalErrorMessage("Failed to submit email")
+    });
 }
 
 function thankUser () {
     setModalInputArea(false);
     setModalErrorMessage("");
-    setModalTitle("You've been added to the waiting list");
+    setModalTitle("All done!");
+    setModalInfoMessage("You've been added to the waitlist");
+
+    setTimeout(() => {
+        if(phoneNumberTextBox) {
+            // Clear phone number after everything is successful
+            const selector = `#${phoneNumberTextBox.id}-input`;
+            const inputNode = document.querySelector(selector);
+
+            if (inputNode) {
+                inputNode.value = "";
+            }
+        }
+        modalClose && modalClose();
+    }, 3000);
 }
