@@ -8,12 +8,21 @@ window.onload = function () {
 
     navOpenButton.addEventListener('click', function () {
         navOpenButton.setAttribute('aria-expanded', "true");
-        navLinks.classList.remove('hidden', 'opacity-0');
-        navLinks.classList.add('opacity-100', 'scale-100')
+        navLinks.classList.add('duration-150')
+        navLinks.classList.remove('hidden');
+        setTimeout(function () {
+            navLinks.classList.add('opacity-100', 'scale-100');
+            navLinks.classList.remove('opacity-0', 'scale-95');
+        }, 2);
     });
 
     navCloseButton.addEventListener('click', function () {
         navOpenButton.setAttribute('aria-expanded', "false");
-        navLinks.classList.add('hidden');
+        navLinks.classList.remove('duration-150', 'opacity-100', 'scale-100');
+        navLinks.classList.add('duration-100', 'opacity-0', 'scale-95');
+
+        setTimeout(function () {
+            navLinks.classList.add('hidden');
+        }, 150);
     });
 };
