@@ -6,7 +6,7 @@ window.onload = () => {
     let navLinks = document.querySelector('#navLinks');
     let navCloseButton = document.querySelector('#navCloseButton');
 
-    let getAccessForms = document.querySelectorAll('#getAccessHero, #getAccessBanner');
+    let getAccessForms = document.querySelectorAll('#getAccessHero, #getAccessBanner1, #getAccessBanner2');
 
     navOpenButton.addEventListener('click', function () {
         navOpenButton.setAttribute('aria-expanded', "true");
@@ -77,6 +77,10 @@ function openModal (targetElement, callBack) {
         setTimeout(() => {
             modal.classList.add('hidden');
             overlay.classList.add('hidden');
+
+            let originalElement = document.querySelector("#modal");
+            let clonedElement = originalElement.cloneNode(true);
+            originalElement.parentNode.replaceChild(clonedElement, originalElement);
         }, 150);
 
         cleanupModal();
@@ -120,7 +124,7 @@ function setModalInputPlaceHolder (placeholderString) {
 }
 
 function validatePhoneNumber (phoneNumber) {
-    return phoneNumber && /\d{10,10}/.test(phoneNumber.trim());
+    return phoneNumber && /^\d{10,10}$/.test(phoneNumber.trim());
 }
 
 function setModalErrorMessage (error) {
@@ -271,7 +275,7 @@ function verifyOTP (otp, phoneNumber) {
 }
 
 function validateEmail (email) {
-    return email && /.+@\..+/.test();
+    return email && /^.+@.+$/.test(email);
 }
 
 function collectEmail (phoneNumber, token) {
