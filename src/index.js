@@ -186,7 +186,6 @@ function sendOtp (target) {
     .then(resp => resp.json())
     .then(resp => {
         setModalLoader(false);
-        console.log(resp);
 
         if (resp.code === 2000) {
             collectOTP(phoneNumber);
@@ -253,7 +252,6 @@ function verifyOTP (otp, phoneNumber) {
     .then(resp => {
         setModalLoader(false);
 
-        console.log(resp);        
         if (resp.code === 2000) {
             if (!resp.data?.user?.email) {
                 collectEmail(phoneNumber, resp.data.token);
