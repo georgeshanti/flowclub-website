@@ -1,5 +1,5 @@
 import "./styles.scss";
-const HOST = 'https://stage.savemo.app';
+const HOST = 'https://prod.savemo.app';
 
 window.onload = () => {
     let navOpenButton = document.querySelector('#navOpenButton');
