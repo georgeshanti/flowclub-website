@@ -32,7 +32,7 @@
                                 <p class="text-base text-gray-300 font-normal leading-7">{{{ nerd.description }}}</p>
                                 <div class="mt-5 flex space-x-3">
                                     <each loop="link in nerd.follow">
-                                        <a href="{{ link.url }}">
+                                        <a href="{{ link.url }}" target="_blank">
                                             <img class="h-4/5" src="{{ link.icon }}" alt="">
                                         </a>
                                     </each>
