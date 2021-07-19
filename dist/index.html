@@ -27,7 +27,7 @@
                                 <img class="lg:w-40 w-32 sm:h-10" src="/logo.21f349ac.svg" alt="Flow logo">
                             </a>
                             <div class="-mr-2 flex items-center md:hidden">
-                                <button type="button" class="bg-transparent rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false" id="navOpenButton">
+                                <button type="button" class="bg-transparent rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false" id="navOpenButton">
                                     <span class="sr-only">Open main menu</span>
                                     <!-- Heroicon name: outline/menu -->
                                     <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -66,7 +66,7 @@
                             <img class="w-32" src="/logo.21f349ac.svg" alt="Flow logo">
                         </div>
                         <div class="-mr-2">
-                            <button type="button" class="bg-transparent rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" id="navCloseButton">
+                            <button type="button" class="bg-transparent rounded-md p-2 inline-flex items-center justify-center text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:bg-primary-bk hover:bg-primary-bk" id="navCloseButton">
                                 <span class="sr-only">Close main menu</span>
                                 <!-- Heroicon name: outline/x -->
                                 <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -75,23 +75,25 @@
                             </button>
                         </div>
                     </div>
-                    <div class="px-2 pt-2 pb-3 space-y-1 text-gray-100">
-                        <a href="/" class="block px-3 py-2 rounded-md text-base font-medium hover:text-gray-900 hover:bg-gray-50">Home</a>
+                    <div class="px-2 pt-2 pb-3 space-y-1 text-gray-100" id="navLinksMobile">
+                        <a href="." class="block px-3 py-2 rounded-md text-base font-medium hover:text-gray-900">Home</a>
                         
-                        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium hover:text-gray-900 hover:bg-gray-50">Blog</a>
+                        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium hover:text-gray-900">Blog</a>
 
-                        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium hover:text-gray-900 hover:bg-gray-50">Releases</a>
+                        <!-- <a href="#"
+                            class="block px-3 py-2 rounded-md text-base font-medium hover:text-gray-900">Releases</a> -->
 
-                        <a href="/about.html" class="block px-3 py-2 rounded-md text-base font-medium hover:text-gray-900 hover:bg-gray-50">About</a>
+                        <a href="/about.html" class="block px-3 py-2 rounded-md text-base font-medium hover:text-gray-900">About</a>
 
-                        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium hover:text-gray-900 hover:bg-gray-50">Swag</a>
+                        <!-- <a href="#"
+                            class="block px-3 py-2 rounded-md text-base font-medium hover:text-gray-900">Swag</a> -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!-- Nav ends -->}
+<!-- Nav ends -->
     
         
         <div class="relative">
@@ -101,7 +103,7 @@
                     <div class="grid md:grid-cols-2 xl:mt-0 md:mt-10 mt-0 mb-20 xl:gap-x-24 gap-x-10">
                         <div class="relative z-10 pb-8 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
                             <main class="md:mt-10 mt-3 mx-auto max-w-7xl sm:mt-12 md:mt-16 lg:mt-20 xl:mt-24">
-                                <div class="">
+                                <div>
                                     <h1 class="xl:text-7xl lg:text-6xl text-5xl tracking-tight font-extrabold text-primary-font md:text-right text-center">
                                         <span class="block md:mb-6 mb-3">Invest with </span>
                                         <span>your friends</span>
@@ -112,10 +114,12 @@
 
                                     <div class="md:mt-14 mt-10 md:text-right text-center">
                                         <p class="mb-5 text-gray-100 xl:text-lg lg:text-base md:text-sm font-light">Get early access to the club</p>
-                                        <div class="inline-flex bg-white items-center md:rounded-2xl rounded-xl border-2 border-primary-btn md:py-1.5 py-1 md:pr-1.5 pr-1 md:pl-5 pl-3 lg:w-4/6 md:5/6">
-    <input id="getAccessHero-input" type="text" class="focus:outline-none w-full" placeholder="Enter your phone no." autocomplete="off">
-    <button id="getAccessHero" type="" class="bg-primary-btn text-gray-100 md:rounded-xl rounded-lg uppercase text-xs md:px-5 px-3 md:py-3 py-2  min-w-max">Get Access</button>
-</div>
+                                        <form id="getAccessHero">
+    <div class="inline-flex bg-white items-center md:rounded-2xl rounded-xl border-2 border-primary-btn md:py-1.5 py-1 md:pr-1.5 pr-1 md:pl-5 pl-3 md:mx-auto lg:w-4/6 md:5/6">
+        <input id="getAccessHero-input" type="text" class="focus:outline-none w-full" placeholder="Enter your phone no." autocomplete="off">
+        <button type="submit" class="bg-primary-btn text-gray-100 md:rounded-xl rounded-lg uppercase text-xs md:px-5 px-3 md:py-3 py-2  min-w-max">Get Access</button>
+    </div>
+</form>
                                     </div>
                                 </div>
                             </main>
@@ -132,17 +136,17 @@
             </div>
         </div>
         <!-- Content -->
-        <div class="md:max-w-7xl max-w-xs mx-auto mt-20">
+        <div class="md:max-w-7xl max-w-xs mx-auto mt-5">
             <!-- Section 1 -->
-            <div class="grid md:grid-cols-2 grid-cols-1 mb-32 gap-x-10">
-                <div class="self-center">
-                    <img class="lg:w-9/12 md:w-10/12 w-full md:ml-auto md:mx-0 mx-auto" src="/friend-pf.d61545ed.png" alt="Friends portfolio">
+            <div class="md:grid md:grid-cols-2 grid-cols-1 mb-24 gap-x-10 md:flex-none flex flex-col-reverse">
+                <div class="self-center md:mt-0 mt-10">
+                    <img class="lg:w-10/12 md:w-10/12 w-full md:ml-auto md:mx-0 mx-auto" src="/friend-pf.d61545ed.png" alt="Friends portfolio">
                 </div>
                 <div class="md:text-left text-center md:min-h-96 relative my-auto md:mt-auto mt-4 feature-text feature-text-right">
                     <h2><span class="text-alt-sand">View</span> your friend's <br> portfolio.</h2>
                     <p>View your friends’ portfolio and <br>see how they are performing. <br> Showcase your portfolio to win <br>bragging rights.</p>
                     
-                    <div class="left-0 bottom-0 md:mt-10 mt-10">
+                    <div class="left-0 bottom-0 md:mt-10 mt-6">
                         <span class="text-alt-sand tracking-widest xl:text-lg md:text-sm">IMPORT YOUR PORTFOLIOS FROM</span>
                         <div class="flex md:space-x-5 space-x-3 mt-5 md:justify-start justify-center">
                             <img class="lg:h-i-lg md:h-10 h-12" src="/kuvera.9b3e635c.png" alt="Kevera app logo">
@@ -156,7 +160,7 @@
             </div>
             <!-- Section 1 ends -->
             <!-- Section 2 -->
-            <div class="md:grid md:grid-cols-2 grid-cols-1 md:flex-none flex flex-col-reverse mb-32 gap-x-10">
+            <div class="grid md:grid-cols-2 grid-cols-1 mb-24 gap-x-10">
                 <div class="md:text-right text-center relative my-auto md:mt-auto mt-10 feature-text feature-text-left">
                     <h2>See what your <br><span class="text-alt-cyan">friends</span> are buying</h2>
                     <p>View verified portfolios and <br>read in-depth analysis from <br> people you follow.</p>
@@ -173,15 +177,15 @@
                         </div>
                     </div> -->
                 </div>
-                <div class="self-center">
-                    <img class="lg:w-8/12 w-10/12 md:mr-auto md:mx-0 mx-auto" src="/friends-buy.e9ee7e30.png" alt="Friends buying">
+                <div class="self-center mb:mt-0 mt-10">
+                    <img class="lg:w-10/12 md:w-10/12 w-full md:mr-auto md:mx-0 mx-auto" src="/friends-buy.e9ee7e30.png" alt="Friends buying">
                 </div>
             </div>
             <!-- Section 2 ends -->
             <!-- Section 3 -->
-            <div class="grid md:grid-cols-2 grid-cols-1 mb-32 gap-x-10">
-                <div class="self-center">
-                    <img class="lg:w-8/12 w-10/12 md:ml-auto md:mx-0 mx-auto" src="/like-minded.10277bf0.png" alt="Liked minded people">
+            <div class="md:grid md:grid-cols-2 grid-cols-1 mb-24 gap-x-10 md:flex-none flex flex-col-reverse">
+                <div class="self-center mb:mt-0 mt-10 ">
+                    <img class="lg:w-10/12 md:w-10/12 w-full md:ml-auto md:mx-0 mx-auto" src="/like-minded.10277bf0.png" alt="Liked minded people">
                 </div>
                 <div class="md:text-left text-center relative my-auto md:mt-auto mt-10 feature-text feature-text-right">
                     <h2><span class="text-primary-font">Chat</span> with like-minded <br> people</h2>
@@ -190,13 +194,13 @@
             </div>
             <!-- Section 3 ends -->
             <!-- Section 4 -->
-            <div class="md:grid md:grid-cols-2 grid-cols-1 md:flex-none flex flex-col-reverse mb-16 gap-x-10">
+            <div class="md:grid md:grid-cols-2 grid-cols-1 mb-16 gap-x-10">
                 <div class="md:text-right text-center relative my-auto md:mt-auto mt-10 feature-text feature-text-left">
                     <h2 class=""><span class="text-alt-tangerine">Discover</span> your next<br> great investment idea</h2>
                     <p class="lg:w-3/4 text-gray-50 mt-10 leading-8 lg:text-lg md:ml-auto xl:text-2xl xl:leading-10">Browse Mutual Funds, Stocks <br> and Ideas in one place. <br>Make instant decisons based <br>Share them with your club in one-click. </p>
                 </div>
-                <div class="self-center">
-                    <img class="lg:w-9/12 w-10/12 md:mr-auto md:mx-0 mx-auto" src="/discover.3825514b.png" alt="Discover">
+                <div class="self-center mb:mt-0 mt-10 ">
+                    <img class="lg:w-10/12  md:w-10/12 w-full md:mr-auto md:mx-0 mx-auto" src="/discover.3825514b.png" alt="Discover">
                 </div>
             </div>
             <!-- Section 4 ends -->
@@ -222,7 +226,7 @@
                 <div class="md:pb-32 pb-24 phone md:pt-10 pt-5 px-10 relative z-10">
                     <div class="text-center relative z-20">
                         <h3 class="text-primary-font xl:text-4xl lg:text-2xl md:text-xl text-3xl font-bold tracking-tight md:leading-normal leading-relaxed">We are always <br class="md:hidden block"> there for you</h3>
-                        <p class="text-gray-100 mt-10 xl:mb-10 lg:mb-16 mb-10 md:leading-8 xl:text-lg md:text-sm lg:leading-10 leading-8">We know that investing your money is  scary.<br class="md:block hidden"> Which is why we are available at the click of a button.<br class="md:block hidden"> Ping us on Whatsapp or Request Callback <br class="md:block hidden">and we’ll get back to you ASAP.<br> <br>PS: You’ll be talking to a human, not a bot.</p>
+                        <p class="text-gray-100 mt-10 xl:mb-10 lg:mb-16 mb-10 md:leading-8 xl:text-lg md:text-sm xl:leading-10 lg:leading-10 leading-8">We know that investing your money is  scary.<br class="md:block hidden"> Which is why we are available at the click of a button.<br class="md:block hidden"> Ping us on Whatsapp or Request Callback <br class="md:block hidden">and we’ll get back to you ASAP.<br> <br>PS: You’ll be talking to a human, not a bot.</p>
                         <a href="#" class="bg-primary-btn px-6 py-4 rounded-2xl text-gray-100 block xl:w-7/12 lg:w-10/12 mx-auto xl:text-base md:text-sm btn font-bold">🤙 Hit us up on Whatsapp</a>
                     </div>
                     <img class="md:hidden absolute left-0 top-0 w-full h-full" src="/phone.9b3e2730.png" alt="Phone">
@@ -238,13 +242,21 @@
         <div class="pt-48 pb-16 overflow-hidden">
             <div class="relative">
                 <div class="xl:w-6/12 lg:w-8/12 w-10/12 my-20 bg-alt-sand text-center py-16 md:px-24 px-10 text-gray-900 rounded-exl mx-auto relative">
-                    <h2 class="md:text-4xl text-3xl font-bold leading-relaxed tracking-tight xl:leading-exl">Not just another <br> investment app</h2> 
+                    <h2 class="md:text-4xl text-3xl font-bold xs:leading-relaxed tracking-tight xl:leading-exl">Not just another <br> investment app</h2> 
                     <p class=" my-7 max-w-lg mx-auto font-medium text-lg leading-9">Everything is more fun with your friends. So we decided to build the investment app that we could use with our friends. Bumped up the fun to eleven, minus all the jargon.</p>
                     <span class="mb-2 block text-alt-aurelium">Get early access to the club</span>
-                    <div class="inline-flex bg-white items-center md:rounded-2xl rounded-xl border-2 border-primary-btn md:py-1.5 py-1 md:pr-1.5 pr-1 md:pl-5 pl-3 md:w-auto w-full">
-    <input id="getAccessBanner-input" type="text" class="focus:outline-none w-full" placeholder="Enter your phone no." autocomplete="off">
-    <button id="getAccessBanner" type="" class="bg-primary-btn text-gray-100 md:rounded-xl rounded-lg uppercase text-xs md:px-5 px-3 md:py-3 py-2  min-w-max">Get Access</button>
-</div>
+                    <form id="getAccessBanner">
+    <div class="inline-flex bg-white items-center md:rounded-2xl rounded-xl border-2 border-primary-btn md:py-1.5 py-1 md:pr-1.5 pr-1 md:pl-5 pl-3 md:mx-auto md:hidden md:w-auto w-full">
+        <input id="getAccessBanner-input" type="text" class="focus:outline-none w-full" placeholder="Enter your no." autocomplete="off">
+        <button type="submit" class="bg-primary-btn text-gray-100 md:rounded-xl rounded-lg uppercase text-xs md:px-5 px-3 md:py-3 py-2  min-w-max">Get Access</button>
+    </div>
+</form>
+                    <form id="getAccessBanner">
+    <div class="inline-flex bg-white items-center md:rounded-2xl rounded-xl border-2 border-primary-btn md:py-1.5 py-1 md:pr-1.5 pr-1 md:pl-5 pl-3 md:mx-auto md:inline-flex hidden md:w-auto w-full">
+        <input id="getAccessBanner-input" type="text" class="focus:outline-none w-full" placeholder="Enter your phone no." autocomplete="off">
+        <button type="submit" class="bg-primary-btn text-gray-100 md:rounded-xl rounded-lg uppercase text-xs md:px-5 px-3 md:py-3 py-2  min-w-max">Get Access</button>
+    </div>
+</form>
 
                     <!-- absolute positioned icons -->
                     <img class="absolute top-0 transform -translate-y-1/2 xl:left-16 left-8 md:h-28 h-24" src="/badge.c6c6078c.svg" alt="Money on my mind image">
@@ -279,7 +291,7 @@
     <div class="xl:max-w-5xl lg:max-w-4xl md:max-w-2xl px-5 mx-auto">
         <div class="flex justify-between transform -translate-y-1/2">
             <img class="lg:h-i-lg md:h-12 h-10" src="/logo_rounded.e226f5d8.svg" alt="Flow club icon">
-            <div class="grid grid-cols-4 gap-x-5 items-center">
+            <div class="grid grid-cols-4 xs:gap-x-5 gap-x-3 items-center">
                 <a href="https://www.instagram.com/flowclub.in/"><img class="w-8" src="/003_instagram.3dccc2d2.svg" alt="Instagram"></a>
                 <a href="https://twitter.com/flowclubIN"><img class="w-8" src="/002_twitter.82e72cda.svg" alt="Twitter"></a>
                 <a href="https://www.linkedin.com/company/joinflow/"><img class="w-8" src="/001_linkedin.c607a4e3.svg" alt="LinkedIn"></a>
@@ -316,10 +328,12 @@
     <div class="md:px-20 px-10 md:py-16 py-10 w-full text-left">
         <h2 id="modalTitle" class="hidden font-normal md:text-3xl text-2xl text-primary-font"></h2>
         <p id="modalMessage" class="hidden font-light mt-5 text-gray-100 text-xl"></p>
-        <div id="inputArea" class="hidden bg-white border-2 border-primary-btn inline-flex items-center mt-10 md:py-1.5 py-1 md:pr-1.5 pr-1 md:pl-5 pl-3 rounded-2xl md:w-11/12 w-full">
-            <input type="text" id="userInput" class="focus:outline-none px-1 text-gray-800 w-full">
-            <button id="userInputSubmit" class="bg-primary-btn text-gray-100 md:px-5 px-3 md:py-3 py-2 rounded-xl uppercase text-xs min-w-max">Submit</button>
-        </div>
+        <form id="userInputSubmit">
+            <div id="inputArea" class="hidden bg-white border-2 border-primary-btn inline-flex items-center mt-10 md:py-1.5 py-1 md:pr-1.5 pr-1 md:pl-5 pl-3 rounded-2xl md:w-11/12 w-full">
+                <input type="text" id="userInput" class="focus:outline-none px-1 text-gray-800 w-full" autocomplete="off">
+                <button type="submit" class="bg-primary-btn text-gray-100 md:px-5 px-3 md:py-3 py-2 rounded-xl uppercase text-xs min-w-max">Submit</button>
+            </div>
+        </form>
         <div id="successMessage" class="hidden"></div>
         <div id="modalLoader" class="hidden mt-5">
             <img class="animate-spin md:h-10 h-8 mx-auto" src="/loader.73ebab4f.png" alt="Loader">

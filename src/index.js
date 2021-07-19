@@ -6,7 +6,7 @@ window.onload = () => {
     let navLinks = document.querySelector('#navLinks');
     let navCloseButton = document.querySelector('#navCloseButton');
 
-    let getAccessButtons = document.querySelectorAll('#getAccessHero, #getAccessBanner');
+    let getAccessForms = document.querySelectorAll('#getAccessHero, #getAccessBanner');
 
     navOpenButton.addEventListener('click', function () {
         navOpenButton.setAttribute('aria-expanded', "true");
@@ -28,8 +28,9 @@ window.onload = () => {
         }, 150);
     });
 
-    getAccessButtons && getAccessButtons.forEach((button) => {
-        button.addEventListener('click', (e) => {
+    getAccessForms && getAccessForms.forEach((button) => {
+        button.addEventListener('submit', (e) => {
+            e.preventDefault();
             openModal(e.target, sendOtp);
         });
     });
@@ -119,7 +120,7 @@ function setModalInputPlaceHolder (placeholderString) {
 }
 
 function validatePhoneNumber (phoneNumber) {
-    return /\d{10,10}/.test(phoneNumber);
+    return phoneNumber && /\d{10,10}/.test(phoneNumber.trim());
 }
 
 function setModalErrorMessage (error) {
@@ -142,12 +143,12 @@ function setModalInputArea (visibility) {
 
 function onSubmitButtonClicked (callBack) {
     const userInput = document.querySelector('#userInputSubmit');
-    userInput.addEventListener('click', callBack);
+    userInput.addEventListener('submit', callBack);
 }
 
 function removeSubmitEventListener (fn) {
     const userInput = document.querySelector('#userInputSubmit');
-    userInput.removeEventListener('click', fn);
+    userInput.removeEventListener('submit', fn);
 }
 
 function setModalInputValue (value) {
@@ -197,15 +198,20 @@ function sendOtp (target) {
     });
 }
 
+function validateOTP (otp) {
+    return otp && /^\d{4,4}$/.test(otp.trim());
+}
+
 function collectOTP (phoneNumber) {
     setModalTitle("Let's verify your number");
     setModalInputArea(true);
     setModalInputPlaceHolder("OTP");
 
-    const onOTPSubmitCallback = () => {
+    const onOTPSubmitCallback = (e) => {
+        e.preventDefault();
         const otp = getModalUserInput();
 
-        if (otp) {
+        if (validateOTP(otp)) {
             verifyOTP(otp, phoneNumber)
             .then((isSuccessful) => {
                 isSuccessful && removeSubmitEventListener(onOTPSubmitCallback);
@@ -264,6 +270,10 @@ function verifyOTP (otp, phoneNumber) {
     });
 }
 
+function validateEmail (email) {
+    return email && /.+@\..+/.test();
+}
+
 function collectEmail (phoneNumber, token) {
     setModalTitle("Email");
     setModalInputArea(true);
@@ -272,10 +282,11 @@ function collectEmail (phoneNumber, token) {
 
     setModalInputPlaceHolder("Email");
 
-    const onEmailSubmitCallback = () => {
+    const onEmailSubmitCallback = (e) => {
+        e.preventDefault();
         const email = getModalUserInput();
 
-        if (email) {
+        if (validateEmail(email)) {
             submitEmail(email, phoneNumber, token)
             .then((isSuccessful) => {
                 isSuccessful && removeSubmitEventListener(onEmailSubmitCallback);
@@ -296,7 +307,7 @@ function submitEmail (email, phoneNumber, token) {
     setModalInputArea(false);
     setModalLoader(true);
 
-    return fetch(`${HOST}/${phoneNumber}/${window.encodeURIComponent(email)}`, {
+    return fetch(`${HOST}/waitlist/${phoneNumber}/${window.encodeURIComponent(email)}`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -328,16 +339,18 @@ function thankUser () {
     setModalTitle("All done!");
     setModalInfoMessage("You've been added to the waitlist");
 
-    setTimeout(() => {
-        if(phoneNumberTextBox) {
-            // Clear phone number after everything is successful
-            const selector = `#${phoneNumberTextBox.id}-input`;
-            const inputNode = document.querySelector(selector);
+    if(phoneNumberTextBox) {
+        // Clear phone number after everything is successful
+        const selector = `#${phoneNumberTextBox.id}-input`;
+        const inputNode = document.querySelector(selector);
 
-            if (inputNode) {
-                inputNode.value = "";
-            }
+        if (inputNode) {
+            inputNode.value = "";
         }
+    }
+
+    setTimeout(() => {
+        
         modalClose && modalClose();
     }, 3000);
 }

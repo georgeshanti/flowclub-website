@@ -19,15 +19,19 @@ button, .btn {
 }
 
 .feature-text h2 {
-    @apply text-gray-50 xl:text-4xl lg:text-3xl md:text-2xl text-3xl font-bold;
+    @apply text-gray-50 xl:text-5xl lg:text-3xl md:text-2xl text-3xl xl:leading-exl font-bold tracking-tight;
 }
 
 .feature-text.feature-text-right p {
-    @apply lg:w-3/4 text-gray-50 mt-5 leading-8 md:mr-auto xl:text-2xl lg:text-xl lg:leading-10;
+    @apply lg:w-3/4 text-gray-50 md:mt-10 mt-4 leading-8 lg:text-lg md:mr-auto xl:text-2xl xl:leading-10;
 }
 
 .feature-text.feature-text-left p {
-    @apply lg:w-3/4 text-gray-50 mt-5 leading-8 md:ml-auto xl:text-2xl lg:text-xl lg:leading-10;
+    @apply lg:w-3/4 text-gray-50 md:mt-10 mt-4  leading-8 lg:text-lg md:ml-auto xl:text-2xl xl:leading-10;
+}
+
+#navLinksMobile a {
+    @apply hover:bg-primary-bk active:bg-primary-bk focus:bg-primary-bk hover:bg-primary-bk;
 }
 
 @tailwind utilities;

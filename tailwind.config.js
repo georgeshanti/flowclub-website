@@ -40,12 +40,15 @@ module.exports = {
       borderRadius: {
         exl: '64px',
         lx: '48px'
+      },
+      screens: {
+        xs: '375px'
       }
     },
   },
   variants: {
     extend: {
-      backgroundColor: [ 'active' ]
+      backgroundColor: [ 'active', 'focus' ]
     },
   },
   plugins: [],

@@ -1,6 +1,6 @@
 <extends src="base.html" locals='{"link": "home"}'>
     <block name="header-wrapper">
-        <include src="components/header.html" locals='{"link": "home"}'></include>}
+        <include src="components/header.html" locals='{"link": "home"}'></include>
     </block>
     <block name="content">
         <div class="relative">
@@ -10,7 +10,7 @@
                     <div class="grid md:grid-cols-2 xl:mt-0 md:mt-10 mt-0 mb-20 xl:gap-x-24 gap-x-10">
                         <div class="relative z-10 pb-8 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
                             <main class="md:mt-10 mt-3 mx-auto max-w-7xl sm:mt-12 md:mt-16 lg:mt-20 xl:mt-24">
-                                <div class="">
+                                <div>
                                     <h1 class="xl:text-7xl lg:text-6xl text-5xl tracking-tight font-extrabold text-primary-font md:text-right text-center">
                                         <span class="block md:mb-6 mb-3">Invest with </span>
                                         <span>your friends</span>
@@ -21,7 +21,7 @@
 
                                     <div class="md:mt-14 mt-10 md:text-right text-center">
                                         <p class="mb-5 text-gray-100 xl:text-lg lg:text-base md:text-sm font-light">Get early access to the club</p>
-                                        <include src="components/subscribe-input.html" locals='{ "id": "getAccessHero", "classList": "lg:w-4/6 md:5/6" }''></include>
+                                        <include src="components/subscribe-input.html" locals='{ "id": "getAccessHero", "classList": "lg:w-4/6 md:5/6", "placeHolderText": "" }'></include>
                                     </div>
                                 </div>
                             </main>
@@ -38,17 +38,17 @@
             </div>
         </div>
         <!-- Content -->
-        <div class="md:max-w-7xl max-w-xs mx-auto mt-20">
+        <div class="md:max-w-7xl max-w-xs mx-auto mt-5">
             <!-- Section 1 -->
-            <div class="grid md:grid-cols-2 grid-cols-1 mb-32 gap-x-10">
-                <div class="self-center">
-                    <img class="lg:w-9/12 md:w-10/12 w-full md:ml-auto md:mx-0 mx-auto" src="resources/icons/friend-pf.png" alt="Friends portfolio">
+            <div class="md:grid md:grid-cols-2 grid-cols-1 mb-24 gap-x-10 md:flex-none flex flex-col-reverse">
+                <div class="self-center md:mt-0 mt-10">
+                    <img class="lg:w-10/12 md:w-10/12 w-full md:ml-auto md:mx-0 mx-auto" src="resources/icons/friend-pf.png" alt="Friends portfolio">
                 </div>
                 <div class="md:text-left text-center md:min-h-96 relative my-auto md:mt-auto mt-4 feature-text feature-text-right">
                     <h2><span class="text-alt-sand">View</span> your friend's <br> portfolio.</h2>
                     <p>View your friends’ portfolio and <br>see how they are performing. <br> Showcase your portfolio to win <br>bragging rights.</p>
                     
-                    <div class="left-0 bottom-0 md:mt-10 mt-10">
+                    <div class="left-0 bottom-0 md:mt-10 mt-6">
                         <span class="text-alt-sand tracking-widest xl:text-lg md:text-sm">IMPORT YOUR PORTFOLIOS FROM</span>
                         <div class="flex md:space-x-5 space-x-3 mt-5 md:justify-start justify-center">
                             <img class="lg:h-i-lg md:h-10 h-12" src="resources/icons/kuvera.png" alt="Kevera app logo">
@@ -62,7 +62,7 @@
             </div>
             <!-- Section 1 ends -->
             <!-- Section 2 -->
-            <div class="md:grid md:grid-cols-2 grid-cols-1 md:flex-none flex flex-col-reverse mb-32 gap-x-10">
+            <div class="grid md:grid-cols-2 grid-cols-1 mb-24 gap-x-10">
                 <div class="md:text-right text-center relative my-auto md:mt-auto mt-10 feature-text feature-text-left">
                     <h2>See what your <br /><span class="text-alt-cyan">friends</span> are buying</h2>
                     <p>View verified portfolios and <br>read in-depth analysis from <br> people you follow.</p>
@@ -79,15 +79,15 @@
                         </div>
                     </div> -->
                 </div>
-                <div class="self-center">
-                    <img class="lg:w-8/12 w-10/12 md:mr-auto md:mx-0 mx-auto" src="resources/icons/friends-buy.png" alt="Friends buying">
+                <div class="self-center mb:mt-0 mt-10">
+                    <img class="lg:w-10/12 md:w-10/12 w-full md:mr-auto md:mx-0 mx-auto" src="resources/icons/friends-buy.png" alt="Friends buying">
                 </div>
             </div>
             <!-- Section 2 ends -->
             <!-- Section 3 -->
-            <div class="grid md:grid-cols-2 grid-cols-1 mb-32 gap-x-10">
-                <div class="self-center">
-                    <img class="lg:w-8/12 w-10/12 md:ml-auto md:mx-0 mx-auto" src="resources/icons/like-minded.png" alt="Liked minded people">
+            <div class="md:grid md:grid-cols-2 grid-cols-1 mb-24 gap-x-10 md:flex-none flex flex-col-reverse">
+                <div class="self-center mb:mt-0 mt-10 ">
+                    <img class="lg:w-10/12 md:w-10/12 w-full md:ml-auto md:mx-0 mx-auto" src="resources/icons/like-minded.png" alt="Liked minded people">
                 </div>
                 <div class="md:text-left text-center relative my-auto md:mt-auto mt-10 feature-text feature-text-right">
                     <h2><span class="text-primary-font">Chat</span> with like-minded <br> people</h2>
@@ -96,13 +96,13 @@
             </div>
             <!-- Section 3 ends -->
             <!-- Section 4 -->
-            <div class="md:grid md:grid-cols-2 grid-cols-1 md:flex-none flex flex-col-reverse mb-16 gap-x-10">
+            <div class="md:grid md:grid-cols-2 grid-cols-1 mb-16 gap-x-10">
                 <div class="md:text-right text-center relative my-auto md:mt-auto mt-10 feature-text feature-text-left">
                     <h2 class=""><span class="text-alt-tangerine">Discover</span> your next<br> great investment idea</h2>
                     <p class="lg:w-3/4 text-gray-50 mt-10 leading-8 lg:text-lg md:ml-auto xl:text-2xl xl:leading-10">Browse Mutual Funds, Stocks <br> and Ideas in one place. <br>Make instant decisons based <br>Share them with your club in one-click. </p>
                 </div>
-                <div class="self-center">
-                    <img class="lg:w-9/12 w-10/12 md:mr-auto md:mx-0 mx-auto" src="resources/icons/discover.png" alt="Discover">
+                <div class="self-center mb:mt-0 mt-10 ">
+                    <img class="lg:w-10/12  md:w-10/12 w-full md:mr-auto md:mx-0 mx-auto" src="resources/icons/discover.png" alt="Discover">
                 </div>
             </div>
             <!-- Section 4 ends -->
@@ -128,7 +128,7 @@
                 <div class="md:pb-32 pb-24 phone md:pt-10 pt-5 px-10 relative z-10">
                     <div class="text-center relative z-20">
                         <h3 class="text-primary-font xl:text-4xl lg:text-2xl md:text-xl text-3xl font-bold tracking-tight md:leading-normal leading-relaxed">We are always <br class="md:hidden block"> there for you</h3>
-                        <p class="text-gray-100 mt-10 xl:mb-10 lg:mb-16 mb-10 md:leading-8 xl:text-lg md:text-sm lg:leading-10 leading-8">We know that investing your money is  scary.<br class="md:block hidden"> Which is why we are available at the click of a button.<br class="md:block hidden"> Ping us on Whatsapp or Request Callback <br class="md:block hidden">and we’ll get back to you ASAP.<br> <br>PS: You’ll be talking to a human, not a bot.</p>
+                        <p class="text-gray-100 mt-10 xl:mb-10 lg:mb-16 mb-10 md:leading-8 xl:text-lg md:text-sm xl:leading-10 lg:leading-10 leading-8">We know that investing your money is  scary.<br class="md:block hidden"> Which is why we are available at the click of a button.<br class="md:block hidden"> Ping us on Whatsapp or Request Callback <br class="md:block hidden">and we’ll get back to you ASAP.<br> <br>PS: You’ll be talking to a human, not a bot.</p>
                         <a href="#" class="bg-primary-btn px-6 py-4 rounded-2xl text-gray-100 block xl:w-7/12 lg:w-10/12 mx-auto xl:text-base md:text-sm btn font-bold">🤙 Hit us up on Whatsapp</a>
                     </div>
                     <img class="md:hidden absolute left-0 top-0 w-full h-full" src="resources/icons/phone.png" alt="Phone">
@@ -144,10 +144,11 @@
         <div class="pt-48 pb-16 overflow-hidden">
             <div class="relative">
                 <div class="xl:w-6/12 lg:w-8/12 w-10/12 my-20 bg-alt-sand text-center py-16 md:px-24 px-10 text-gray-900 rounded-exl mx-auto relative">
-                    <h2 class="md:text-4xl text-3xl font-bold leading-relaxed tracking-tight xl:leading-exl">Not just another <br> investment app</h2> 
+                    <h2 class="md:text-4xl text-3xl font-bold xs:leading-relaxed tracking-tight xl:leading-exl">Not just another <br> investment app</h2> 
                     <p class=" my-7 max-w-lg mx-auto font-medium text-lg leading-9">Everything is more fun with your friends. So we decided to build the investment app that we could use with our friends. Bumped up the fun to eleven, minus all the jargon.</p>
                     <span class="mb-2 block text-alt-aurelium">Get early access to the club</span>
-                    <include locals='{"id":"getAccessBanner", "classList": "md:w-auto w-full", "placeHolder": "Enter your number"}' src="components/subscribe-input.html"></include>
+                    <include locals='{"id":"getAccessBanner", "classList": "md:hidden md:w-auto w-full", "placeHolderText": "Enter your no."}' src="components/subscribe-input.html"></include>
+                    <include locals='{"id":"getAccessBanner", "classList": "md:inline-flex hidden md:w-auto w-full", "placeHolderText": ""}' src="components/subscribe-input.html"></include>
 
                     <!-- absolute positioned icons -->
                     <img class="absolute top-0 transform -translate-y-1/2 xl:left-16 left-8 md:h-28 h-24" src="resources/icons/badge.svg" alt="Money on my mind image">
