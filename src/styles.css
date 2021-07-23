@@ -36,6 +36,13 @@ button, .btn {
 
 @tailwind utilities;
 
+.phone {
+    background-image: url("resources/icons/phone-full.svg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+}
+
 @media screen and (min-width: 1024px) {
     .banner #text-part {
         background-image: url("resources/icons/banner-bg.svg");
