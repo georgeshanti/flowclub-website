@@ -34,6 +34,10 @@ button, .btn {
     @apply hover:bg-primary-bk active:bg-primary-bk focus:bg-primary-bk hover:bg-primary-bk;
 }
 
+a, button {
+    -webkit-tap-highlight-color: transparent;
+}
+
 @tailwind utilities;
 
 .phone {
